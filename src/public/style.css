@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    background: linear-gradient(90deg, #211940 0%, #5C548A 100%);
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    height: 100px;
+    background: #2119404d;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    margin-top: 25px;
+    margin-left: 40px;
+    margin-bottom: 25px;
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 48px;
+    color: #FFFFFF;
+}
+
+nav .btn-connect, .fas {
+    margin-top: 25px;
+    margin-right: 40px;
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+nav .btn-connect {
+    height: 50px;
+    width: 260px;
+    font-family: Roboto;
+    border-radius: 25px;
+    background: #B897C1;
+    border: none;
+    transition: transform 0.2s
+}
+
+nav .btn-connect:hover {
+    transform: scale(.95, .95);
+}
+
+nav .fas {
+    display: none;
+}
+
+/* Section body */
+.section-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section-body h1 {
+    font-size: 34px;
+    
+}
+
+.section-body h1, h2 {
+    display: block;
+    margin-top: 15px;
+    color: #fff;
+}
+
+.section-body .ethereum,
+.section-body .ethereum span,
+.section-body .ethereum .top, 
+.section-body .ethereum .top .coin,
+.section-body .ethereum .balance, 
+.section-body .ethereum .transferBtn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    margin-top: 30px;
+}
+
+.section-body .ethereum {
+    display: none;
+    background: transparent;
+    box-shadow: 1px 7px 25px #222;
+    width: 600px;
+    height: 600px;
+}
+
+.section-body .ethereum span {
+    color: #f00;
+}
+
+.section-body .ethereum .top .coin, .section-body .ethereum .balance{
+    font-size: 24px;
+    color: #fff;
+}
+
+.section-body .ethereum .transferBtn {
+    width: 280px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Roboto;
+    border-radius: 25px;
+    background: #B897C1;
+    border: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.section-body .ethereum .transferBtn:hover {
+    transform: scale(.95, .95);
+}
+
+/* Modal */
+.modal, .container {
+    transition: all 500ms ease;
+}
+
+.modal {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0, .5);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-30%);
+}
+
+.container {
+    width: 400px;
+    height: 300px;
+    margin: auto;
+    background: #fff;
+    box-shadow: 1px 7px 25px rgba(0, 0, 0, 0, .6);
+    position: relative;
+}
+
+.container .title {
+    padding: 10px;
+    background: linear-gradient(90deg, #211940 0%, #5C548A 100%);
+    color: #fff;
+}
+
+.container .btn-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.container .modal-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.container .modal-content .inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .modal-content .inputs input, .btn {
+    width: 250px;
+    height: 35px;
+    margin: 8px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+}
+
+.container .modal-content .inputs input {
+    background: #dadada;
+    padding-left: 10px;
+}
+
+.container .modal-content .inputs input:focus {
+    background: #c2c2c2
+}
+
+.container .modal-content .inputs .btn {
+    cursor: pointer;
+    background: #5C548A;
+    color: #fff;
+    font-size: 24px;
+}
+
+.container .modal-content .inputs .btn:hover {
+    background: #5c548af2;
+}
+
+.container .modal-content .inputs .wallet {
+    margin-top: 15px;
+}
+
+.container .modal-content .inputs .error {
+    color: #f00;
+}
+
+.container .modal-content .inputs .wallet .walletRecive {
+    color: #000;
+}
+
+.container .modal-content .inputs .wallet i {
+    font-size: 15px;
+    color: #f00;
+    margin: auto;
+}

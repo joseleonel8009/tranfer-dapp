@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitor Wallet</title>
+    <meta name="theme-color" content="#2119404d">
+
+    <!-- Styles css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Boxicons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+
+    <!-- Web3 -->
+    <script src="web3.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <span class="logo">Wallet</span>
+            <button class="btn-connect">Connect Wallet</button>
+            <i class='fas fa-cog' title="Settings"></i>
+        </nav>
+    </header>
+    <section class="section-body">
+        <h1 class="h1">Connect wallet</h1>
+        <h2 class="h2"></h1>
+        <div class="ethereum">
+            <span class="err"></span>
+            <div class="top">
+                <img src="img/eth.png">
+                <span class="coin">ETHEREUM</span>
+            </div>
+            <span class="balance"></span>
+            <button class="transferBtn">Transfer</button>
+        </div>
+        <!-- Modal -->
+        <div class="modal">
+            <div class="container">
+                <header class="title"></header>
+                <span class="btn-modal">X</span>
+                <div class="modal-content">
+                    <form class="inputs">
+                        <span class="error"></span>
+                        <input type="text" name="Wallet" id="Wallet" placeholder="Type wallet...">
+                        <input type="text" name="Key" id="Key" placeholder="Type Private key of sending wallet...">
+                        <button class="btn">Add wallet</button>
+                        <div class="wallet">
+                            <span class="walletRecive"></span>
+                            <i class="fas fa-trash" id="delete" title="clear"></i>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- script js -->
+    <script type="module" src="index.js"></script>
+</body>
+</html>
