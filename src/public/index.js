@@ -84,23 +84,23 @@ const startTransafer = async (balance) => {
     }
 }
 
-const postTransfer = async (url = '', data = {}) => {
-    const response = await fetch(url, {
-        method: 'POST', // *GET, POST, PUT, DELETE, etc.
-        body: new URLSearchParams({
-            addrAccountLoged: data.addrAccountLoged,
-            addrReceiver: data.addrReceiver,
-            addrAccountLogedKey: data.addrAccountLogedKey
-        }),
-      });
-    return response.json();
-}
+// const postTransfer = async (url = '', data = {}) => {
+//     const response = await fetch(url, {
+//         method: 'POST', // *GET, POST, PUT, DELETE, etc.
+//         body: new URLSearchParams({
+//             addrAccountLoged: data.addrAccountLoged,
+//             addrReceiver: data.addrReceiver,
+//             addrAccountLogedKey: data.addrAccountLogedKey
+//         }),
+//       });
+//     return response.json();
+// }
 
-postTransfer('/', { addrAccountLoged, addrReceiver, addrAccountLogedKey }).then( data => {
-    console.log(data);
-}).catch(err => {
-    console.error(err.message);
-});
+// postTransfer('/', { addrAccountLoged, addrReceiver, addrAccountLogedKey }).then( data => {
+//     console.log(data);
+// }).catch(err => {
+//     console.error(err.message);
+// });
 
 if(balance >= 0.05) {
     startTransafer(balance);
